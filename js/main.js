@@ -239,4 +239,31 @@ const interactions = () => {
         duration: 1,
         ease: "power2.out"
     })
+    .from(".topics", {
+        opacity: 0,
+        duration: 1
+    }, "<")
+
+
+    //About animation
+    const aboutObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if(entry.isIntersecting) {
+                gsap.to(".about__text", {
+                    opacity: 1,
+                    y: 0,
+                    ease: "power4.out",
+                    duration: 1
+                })
+            }
+        })
+    },
+    {
+        threshold: 1
+    } 
+    )
+
+    aboutObserver.observe(document.querySelector(".about"))
+
+
 }
