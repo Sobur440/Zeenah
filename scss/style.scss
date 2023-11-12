@@ -52,8 +52,10 @@ img {
     top: 0;
     z-index: 10;
     display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
 }
 
 .counter {
@@ -62,6 +64,9 @@ img {
     font-family: $light-machina;
     margin-right: 2rem;
     margin-bottom: 2rem;
+    align-self: flex-end;
+    position: absolute;
+    bottom: 0;
 }
 
 //body styling
