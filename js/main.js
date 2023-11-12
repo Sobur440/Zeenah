@@ -42,6 +42,7 @@ const smoothScroll = () => {
 
 document.addEventListener("DOMContentLoaded", () => {
 
+    interactions()
     smoothScroll()
     
     class arrivalsClass {
@@ -186,3 +187,56 @@ document.addEventListener("DOMContentLoaded", () => {
 
 })
 
+const preloader = () => {
+    const counter = document.querySelector(".counter")
+    let count = 0
+    
+    const updateCounter = () => {
+        count += Math.floor(Math.random() * 10) + 1
+        if(count >= 100) {
+            count = Math.min(count, 100)
+        }
+
+        counter.textContent = count + "%"
+
+    }
+    
+    setTimeout(() => {
+        setInterval(updateCounter, 100)
+    }, 500)
+}
+preloader()
+
+const interactions = () => {
+
+    const tl = gsap.timeline()
+
+    tl.to(".loader", {
+        scale: 0,
+        delay: 3
+    })
+    .set(".loader", {
+        display: "none"
+    })
+    .to(".hero", {
+        clipPath: "polygon(91% 34%, 12% 33%, 11% 61%, 91% 61%)",
+        ease: "power4.out",
+    })
+    .to(".hero", {
+        clipPath: "polygon(100% 0, 0 0, 0 100%, 100% 100%)",
+        delay: "0.3",
+        scale: 1,
+        ease: "power4.out"
+    }).to(".title__letter", {
+        clipPath: "polygon(0 100%, 100% 100%, 100% 0, 0 0)",
+        y: 0,
+        opacity: 1,
+        stagger: {amount: 0.5},
+        delay: 0.1
+    })
+    .to(".navbar", {
+        top: 0,
+        duration: 1,
+        ease: "power2.out"
+    })
+}
