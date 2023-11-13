@@ -112,9 +112,9 @@ document.addEventListener("DOMContentLoaded", () => {
         entries.forEach(entry => {
             if(entry.isIntersecting) {
                 gsap.to(".collections__list__container", {
-                    clipPath: "polygon(0 100%, 100% 100%, 100% 0, 0 0)"
+                    clipPath: "polygon(0 100%, 100% 100%, 100% 0, 0 0)",
+                    onComplete: collectionsImageChange
                 })
-                setTimeout(collectionsImageChange, 1000)
             }
         })
     })
