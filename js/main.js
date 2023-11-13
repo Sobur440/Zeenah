@@ -249,7 +249,7 @@ const preloader = () => {
     }
     
     setTimeout(() => {
-        setInterval(updateCounter, 100)
+        setInterval(updateCounter, 250)
     }, 500)
 }
 preloader()
@@ -260,7 +260,7 @@ const interactions = () => {
 
     tl.to(".waiting, .counter", {
         opacity: 0,
-        delay: 3
+        delay: 6
     })
     .to(".loader", {
         scale: 0,
