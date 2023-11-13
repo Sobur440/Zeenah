@@ -81,7 +81,9 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         })
     })
+    const arrEls = document.querySelectorAll(".goods__details")
 
+    //Category Animatiom
     const catObserver = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if(entry.isIntersecting) {
@@ -95,7 +97,6 @@ document.addEventListener("DOMContentLoaded", () => {
         })
     })
     
-    const arrEls = document.querySelectorAll(".goods__details")
     const catContainers = document.querySelectorAll(".category__container")
 
     arrEls.forEach(arrEl => {
@@ -113,6 +114,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 gsap.to(".collections__list__container", {
                     clipPath: "polygon(0 100%, 100% 100%, 100% 0, 0 0)"
                 })
+                collectionsImageChange()
             }
         })
     })
@@ -207,28 +209,33 @@ document.addEventListener("DOMContentLoaded", () => {
         document.querySelector("." + selector).classList.remove(className)
     }
     
-    collections.forEach(collection => {
-        collection.addEventListener("mouseover", (e) => {
-            const targetClass = e.target.classList[2]
-    
-            imgContainerClasses.forEach(imgContainerClass => {
-                const match = document.querySelector("." + imgContainerClass).classList.contains(targetClass)
-                if(match) {
-                    addClass(imgContainerClass, "collection__img__container__active")
-                } else {
-                    removeClass(imgContainerClass, "collection__img__container__active")
-                }
-            })
-    
-            textClasses.forEach(textClass => {
-                if(e.target.classList.contains(textClass)) {
-                    addClass(textClass, "collection__list__text__active")
-                } else {
-                    removeClass(textClass, "collection__list__text__active")
-                }
+    const collectionsImageChange = () => {
+
+
+        collections.forEach(collection => {
+            collection.addEventListener("mouseover", (e) => {
+                const targetClass = e.target.classList[2]
+        
+                imgContainerClasses.forEach(imgContainerClass => {
+                    const match = document.querySelector("." + imgContainerClass).classList.contains(targetClass)
+                    if(match) {
+                        addClass(imgContainerClass, "collection__img__container__active")
+                    } else {
+                        removeClass(imgContainerClass, "collection__img__container__active")
+                    }
+                })
+        
+                textClasses.forEach(textClass => {
+                    if(e.target.classList.contains(textClass)) {
+                        addClass(textClass, "collection__list__text__active")
+                    } else {
+                        removeClass(textClass, "collection__list__text__active")
+                    }
+                })
             })
         })
-    })
+
+    }
     
     
 
