@@ -326,6 +326,11 @@ body {
     .goods__container::-webkit-scrollbar {
         width: 0;
     }
+
+    .goods__details {
+        transform: translateY(300px);
+        opacity: 0;
+    }
     
 }
 

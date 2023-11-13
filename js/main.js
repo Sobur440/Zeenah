@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
     interactions()
     smoothScroll()
     
-    class arrivalsClass {
+    class ArrivalsClass {
         constructor(name, image, price) {
             this.name = name
             this.image = image
@@ -64,13 +64,31 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     
     arrivals.forEach(arrival => {
-        const good = new arrivalsClass(arrival.name, arrival.image, arrival.price)
+        const good = new ArrivalsClass(arrival.name, arrival.image, arrival.price)
         goodsContainer.innerHTML += good.render()
     })
+
+    // Arrivals Interaction
+    const arrivalsObserver = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if(entry.isIntersecting) {
+                // const targetElement = entry.target
+                gsap.to(".goods__details", {
+                    y: 0,
+                    opacity: 1,
+                    stagger: {amount: 1}
+                })
+            }
+        })
+    }, {
+        // threshold: 1
+    })
     
-    
-    
-    
+    const arrEls = document.querySelectorAll(".goods__details")
+
+    arrEls.forEach(arrEl => {
+        arrivalsObserver.observe(arrEl)
+    })
     
     
     // Nav Menu
@@ -211,9 +229,12 @@ const interactions = () => {
 
     const tl = gsap.timeline()
 
-    tl.to(".loader", {
-        scale: 0,
+    tl.to(".waiting, .counter", {
+        opacity: 0,
         delay: 3
+    })
+    .to(".loader", {
+        scale: 0,
     })
     .set(".loader", {
         display: "none"
@@ -264,6 +285,7 @@ const interactions = () => {
     )
 
     aboutObserver.observe(document.querySelector(".about"))
+
 
 
 }
