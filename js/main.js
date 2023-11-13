@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const arrivalsObserver = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if(entry.isIntersecting) {
-                // const targetElement = entry.target
+                const targetElement = entry.target
                 gsap.to(".goods__details", {
                     y: 0,
                     opacity: 1,
@@ -80,15 +80,44 @@ document.addEventListener("DOMContentLoaded", () => {
                 })
             }
         })
-    }, {
-        // threshold: 1
+    })
+
+    const catObserver = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if(entry.isIntersecting) {
+                const targetElement = entry.target
+                gsap.to(".category__container", {
+                    y: 0,
+                    opacity: 1,
+                    stagger: {amount: 0.5}
+                })
+            }
+        })
     })
     
     const arrEls = document.querySelectorAll(".goods__details")
+    const catContainers = document.querySelectorAll(".category__container")
 
     arrEls.forEach(arrEl => {
         arrivalsObserver.observe(arrEl)
     })
+    catContainers.forEach(catContainer => {
+        catObserver.observe(catContainer)
+    })
+
+    // collections
+
+    const collectionObserver = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if(entry.isIntersecting) {
+                gsap.to(".collections__list__container", {
+                    clipPath: "polygon(0 100%, 100% 100%, 100% 0, 0 0)"
+                })
+            }
+        })
+    })
+    collectionObserver.observe(document.querySelector(".collections__list__container"))
+    
     
     
     // Nav Menu
