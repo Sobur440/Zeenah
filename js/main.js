@@ -114,7 +114,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 gsap.to(".collections__list__container", {
                     clipPath: "polygon(0 100%, 100% 100%, 100% 0, 0 0)"
                 })
-                setTimeout(collectionsImageChange, 900)
+                setTimeout(collectionsImageChange, 1000)
             }
         })
     })
