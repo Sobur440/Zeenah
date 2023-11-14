@@ -230,6 +230,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         addClass(textClass, "collection__list__text__active")
                     } else {
                         removeClass(textClass, "collection__list__text__active")
+                        
                     }
                 })
             })
