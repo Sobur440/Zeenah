@@ -382,6 +382,26 @@ const interactions = () => {
 
     aboutObserver.observe(document.querySelector(".about"))
 
+    const newsletterObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if(entry.isIntersecting) {
+                gsap.to(".stay", {
+                    opacity: 1,
+                    y: 0,
+                    ease: "power4.out",
+                    // duration: 1
+                    stagger: {amount: 0.5}
+                })
+            }
+        })
+    },
+    {
+        threshold: 1
+    } 
+    )
+
+    newsletterObserver.observe(document.querySelector(".newsletter__title__container"))
+
 
 
 }
