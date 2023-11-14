@@ -540,7 +540,7 @@ body {
 .collections {
 
     .container {
-        width: 98%;
+        width: 95%;
         height: 60vw;
         margin: 0 auto;
         display: flex;
@@ -593,17 +593,17 @@ body {
 
     .collections__list {
         display: flex;
-        max-width: 65rem;
+        max-width: 75rem;
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
-        gap: 5rem;
+        gap: 5.3rem;
         line-height: 0.5;
         margin-top: 5rem;
     }
 
     .collection__list__text {
-        font-size: 4rem;
+        font-size: 4.7rem;
         color: #ffffff99;
         display: inline-block;
         text-transform: capitalize;
@@ -750,17 +750,16 @@ body {
 
 .footer {
     width: 100%;
-    height: 90vh;
+    height: 47rem;
     background: #242424;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center;overflow: hidden;
 
 
     .container {
         width: 95%;
-        height: 98%;
-        margin: 3rem;
+        height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -773,7 +772,13 @@ body {
         justify-content: space-between;
         align-items: center;
         margin: 2.5rem 0;
-        margin-bottom: 4rem;
+        // margin-bottom: 4rem;
+        padding-bottom:4rem;
+        border-bottom: 1px solid white;
+        flex: 1;
+        height: 20rem;
+        padding-left: .5rem;
+        padding-right: .5rem;
     }
 
     ul {
@@ -810,12 +815,14 @@ body {
     }
 
     .second__layer {
-        height: 75%;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        // margin-bottom: 40px;
+        margin-bottom: 1.5rem;
+        height: 33rem;
+        flex: 2;
+        padding-bottom: 3rem;
     }
 
     .footer__title {
@@ -846,6 +853,15 @@ body {
         }
     }
 
+    .collections {
+        .collections__list {
+            gap: 3rem;
+        }
+        .collection__list__text {
+            font-size: 3.7rem;
+        }
+    }
+
     .to__top {
         width: 10%;
         display: flex;
@@ -873,8 +889,17 @@ body {
 
     .collections {
 
+        .container {
+            height: 50rem;
+            width: 96%;
+        }
+
+        .collection__list__text {
+
+        }
+            
         .collections__list {
-            line-height: 0.5em;
+            // line-height: 0.5em;
         }
     }
 
@@ -918,7 +943,6 @@ body {
         .collections__list {
             font-size: 1.5rem;
             max-width: 35rem;
-            line-height: 0em;
         }
 
         .collection__list__text {
@@ -944,6 +968,8 @@ body {
             height: 70%;
             margin: 1rem 0;
             align-items: flex-start;
+            flex: 2;
+            padding-bottom: 1rem;
         }
 
         .socials {
@@ -1336,12 +1362,12 @@ body {
         }
 
         .second__layer {
-
+            padding-bottom: 0;
 
             .topics {
     
                 .topic {
-                    padding: 0.5rem 1rem;
+                    padding: 0.8rem 1rem;
                 }
             }
         }
