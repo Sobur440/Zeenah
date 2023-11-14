@@ -87,12 +87,6 @@ document.addEventListener("DOMContentLoaded", () => {
                     opacity: 1,
                     stagger: {amount: 1}
                 })
-            } else {
-                gsap.to(".goods__details", {
-                    y: 300,
-                    opacity: 0,
-                    stagger: {amount: 1}
-                })
             }
         })
     })
@@ -106,12 +100,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 gsap.to(".category__container", {
                     y: 0,
                     opacity: 1,
-                    stagger: {amount: 0.5}
-                })
-            } else {
-                gsap.to(".category__container", {
-                    y: 300,
-                    opacity: 0,
                     stagger: {amount: 0.5}
                 })
             }

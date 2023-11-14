@@ -344,6 +344,7 @@ body {
         overflow-x: scroll;
         position: relative;
         gap: 1rem;
+        cursor: grab;
     }
 
     .goods__container::-webkit-scrollbar {
