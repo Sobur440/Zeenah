@@ -119,13 +119,16 @@ body {
     
     .nav__icons {
         display: flex;
-        gap: 2rem;
+        gap: .5rem;
         align-items: center;
+    }
+
+    .cartNumber {
+        transform: scale(0.8) translateY(-10px) translateX(-5px);
     }
     
     .search,
-    .bag,
-    .two {
+    .bag {
         cursor: pointer;
     }
 
@@ -177,7 +180,7 @@ body {
     align-items: flex-end;
     justify-content: center;
     clip-path: polygon(91% 34%, 91% 34%, 91% 62%, 91% 63%);
-    transition: .5s ease-out;
+    transition: .5s ease-in-out;
     width: 100vw;
     height: 100vh;  
     transform: scale(0.5);
@@ -328,6 +331,10 @@ body {
         display: flex;
         justify-content: space-between;
         margin-bottom: 1rem;
+
+        .title {
+            font-size: 1.2rem;
+        }
     }
 
     .goods__container {
@@ -420,6 +427,7 @@ body {
     .explore__categories__text {
         text-transform: uppercase;
         font-family: $headings-font, serif;
+        font-size: 1.2rem;
     }
 
     .shop__all__link {
@@ -431,7 +439,7 @@ body {
         position: relative;
         overflow: hidden;
         z-index: 2;
-        transition: .3s ease-out;
+        transition: .3s ease-in-out;
         display: block;
 
         &:hover {
@@ -451,7 +459,7 @@ body {
             border-radius: 30px;
             z-index: -1;
             border: none;
-            transition: .3s ease-out;
+            transition: .3s ease-in-out;
         }
 
         &:hover::before {
@@ -500,7 +508,8 @@ body {
         left: 0;
         top: 20%;
         opacity: 0;
-        transition: .6s;
+        transform: translateY(100px);
+        transition: .6s ease-in-out;
     }
 
     .category__img {
@@ -513,6 +522,7 @@ body {
 
     .category__img__focus {
         opacity: 1;
+        transform: translateY(0);
     }
 
 }
@@ -545,8 +555,8 @@ body {
 .collections {
 
     .container {
-        width: 95%;
-        height: 60vw;
+        width: 95vw;
+        height: 50vw;
         margin: 0 auto;
         display: flex;
         flex-direction: column;
@@ -558,6 +568,7 @@ body {
         text-transform: uppercase;
         font-family: $headings-font, serif;
         margin-bottom: 3rem;
+        font-size: 1.2rem;
     }
 
     .collections__list__container {
@@ -569,7 +580,7 @@ body {
         align-items: center; 
         flex-direction: column;
         clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
-        transition: .7s ease-out;
+        transition: .7s ease-in-out;
     }
 
     .collection__img__container {
@@ -589,7 +600,7 @@ body {
         max-width: 100%;
         height: 100%;
         object-fit: cover;
-        border-radius: .5rem;
+        border-radius: .7rem;
     }
 
     .collection__img__container__active {
@@ -598,7 +609,7 @@ body {
 
     .collections__list {
         display: flex;
-        max-width: 75rem;
+        max-width: 65rem;
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
@@ -608,7 +619,7 @@ body {
     }
 
     .collection__list__text {
-        font-size: 4.7rem;
+        font-size: 3.9rem;
         color: #ffffff99;
         display: inline-block;
         text-transform: capitalize;
@@ -621,7 +632,7 @@ body {
     }
 
     .discover__all {
-        margin-top: 6rem;
+        margin-top: 2rem;
     }
 
     .discover__all__link {
@@ -633,7 +644,7 @@ body {
         position: relative;
         overflow: hidden;
         display: block;
-        transition: .3s ease-out;
+        transition: .3s ease-in-out;
 
         &:hover {
             color: $primary-color;
@@ -651,7 +662,7 @@ body {
             border-radius: 30px;
             z-index: -1;
             border: none;
-            transition: .3s ease-out;
+            transition: .3s ease-in-out;
         }
 
         &:hover::before {
@@ -722,7 +733,7 @@ body {
         align-items: center;
         overflow: hidden;
         z-index: 1;
-        transition: .3s ease-out;
+        transition: .3s ease-in-out;
 
         &:hover {
             color: $primary-color;
@@ -740,7 +751,7 @@ body {
             border-radius: 30px;
             z-index: -1;
             border: none;
-            transition: .3s ease-out;
+            transition: .3s ease-in-out;
         }
 
         &:hover::before {
@@ -1014,7 +1025,7 @@ body {
 
 }
 
-@media (max-width: 768px) {
+@media (max-width: 850px) {
 
     .categories {
         height: 100vh;
@@ -1041,9 +1052,10 @@ body {
             scroll-snap-align: start;
             scroll-snap-stop: always;
         }
-
+        
         .category__img__container {
             opacity: 1;
+            transform: translateY(0px);
         }
 
         .category {
@@ -1080,7 +1092,7 @@ body {
                 left: 0;
                 padding-top: 3rem;
                 gap: 5rem;
-                transition: .4s ease-out;
+                transition: .4s ease-in-out;
             }
 
             .down {
