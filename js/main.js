@@ -322,7 +322,7 @@ const interactions = () => {
 
     tl.to(".waiting, .counter", {
         opacity: 0,
-        delay: 7
+        delay: 9
     })
     .to(".loader", {
         scale: 0,
