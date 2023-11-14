@@ -14,7 +14,7 @@ const sliderElements = document.querySelectorAll(".category__container")
 const dot1 = document.querySelector(".cert__dot1")
 const dot2 = document.querySelector(".cert__dot2")
 const dot3 = document.querySelector(".cert__dot3")
-const categories = document.querySelectorAll(".category__container")
+const categories = document.querySelectorAll(".category")
 const collections = document.querySelectorAll(".collection__list__text")
 const bracelet = document.querySelector(".bracelet__text")
 const goodsContainer = document.querySelector(".goods__container")
@@ -182,14 +182,34 @@ document.addEventListener("DOMContentLoaded", () => {
         "kids__category__img"
     ]
 
+    const catTextClasses = [
+        "men__text",
+        "women__text",
+        "kids__text"
+    ]
+
     categories.forEach(category => {
         category.addEventListener("mouseover", (e) => {
-            const targetClass = e.target.classList[2]
-            console.log(targetClass)
+            const targetClass = category.classList[2]
             catImgContainerClasses.forEach(catImgContainerClass => {
                 const match = document.querySelector(`.${catImgContainerClass}`).classList.contains(targetClass)
-                console.log(match)
+                if(match) {
+                    addClass(catImgContainerClass, "category__img__focus")
+                } else {
+                    removeClass(catImgContainerClass, "category__img__focus")
+                }
+                
             })
+
+            catTextClasses.forEach(catTextClass => {
+                const match = document.querySelector("." + catTextClass).classList.contains(targetClass)
+                if(match) {
+                    addClass(catTextClass, "category__focus")
+                } else {
+                    removeClass(catTextClass, "category__focus")
+                }
+            })
+
         })
     })
 

@@ -475,6 +475,8 @@ body {
         font-size: 4rem;
         font-family: $machina;
         margin-top: 10rem;
+        cursor: pointer;
+        transition: .6s;
     }
 
     .category__container {
@@ -487,6 +489,7 @@ body {
         height: 30rem;
         transform: translateY(200px);
         opacity: 0;
+
     }
 
     .category__img__container {
@@ -496,6 +499,7 @@ body {
         left: 0;
         top: 20%;
         opacity: 0;
+        transition: .6s;
     }
 
     .category__img {
@@ -772,7 +776,6 @@ body {
         justify-content: space-between;
         align-items: center;
         margin: 2.5rem 0;
-        // margin-bottom: 4rem;
         padding-bottom:4rem;
         border-bottom: 1px solid white;
         flex: 1;
