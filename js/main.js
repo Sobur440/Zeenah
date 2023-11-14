@@ -18,6 +18,7 @@ const categories = document.querySelectorAll(".category")
 const collections = document.querySelectorAll(".collection__list__text")
 const bracelet = document.querySelector(".bracelet__text")
 const goodsContainer = document.querySelector(".goods__container")
+const toTop = document.querySelectorAll(".top__links")
 
 // Implementing smooth scroll with lenis
 
@@ -38,6 +39,13 @@ const smoothScroll = () => {
     }
     
     requestAnimationFrame(raf);
+
+    toTop.forEach(top => {
+        top.addEventListener("click", () => {
+            lenis.scrollTo('#top')
+        })
+    })
+
 }
 
 
@@ -303,8 +311,8 @@ const preloader = () => {
     }
     
     setTimeout(() => {
-        setInterval(updateCounter, 350)
-    }, 500)
+        setInterval(updateCounter, 500)
+    }, 400)
 }
 preloader()
 
@@ -336,7 +344,10 @@ const interactions = () => {
         y: 0,
         opacity: 1,
         stagger: {amount: 0.5},
-        delay: 0.1
+        delay: 0.1,
+        onComplete: () => {
+            document.body.style.overflowY = "auto"
+        }
     })
     .to(".navbar", {
         top: 0,
