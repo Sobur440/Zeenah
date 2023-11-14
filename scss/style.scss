@@ -66,6 +66,7 @@ section {
     justify-content: center;
     align-items: center;
     color: white;
+    font-size: 2rem;
 }
 
 .counter {
@@ -603,6 +604,7 @@ body {
         display: inline-block;
         text-transform: capitalize;
         cursor: pointer;
+        transition: .5s;
     }
 
     .collection__list__text__active {
@@ -1166,6 +1168,19 @@ body {
 }
 
 @media (max-width: 450px) {
+    .loader {
+        font-size: 1.2rem;
+    }
+
+    .counter {
+        color: white;
+        font-size: 10vw;
+        font-family: $light-machina;
+        margin-right: 2rem;
+        margin-bottom: 4rem;
+        align-self: flex-end;
+        position: absolute;
+    }
 
     section {
         margin-bottom: 6rem;
