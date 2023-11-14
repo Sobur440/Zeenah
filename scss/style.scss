@@ -41,6 +41,16 @@ img {
     max-width: 100%;
 }
 
+section {
+    margin-bottom: 12rem;
+}
+
+.collections,
+.newsletter
+{
+    margin-bottom: 6rem;
+}
+
 //Preloader
 
 .loader {
@@ -525,8 +535,8 @@ body {
 .collections {
 
     .container {
-        width: 90%;
-        height: 60rem;
+        width: 98%;
+        height: 70rem;
         margin: 0 auto;
         display: flex;
         flex-direction: column;
@@ -1156,6 +1166,17 @@ body {
 }
 
 @media (max-width: 450px) {
+
+    section {
+        margin-bottom: 6rem;
+    }
+
+    .arrivals,
+    .categories
+    {
+        margin-bottom: 0;
+    }
+
 
     .navbar {
         .nav__icons {
