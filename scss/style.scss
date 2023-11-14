@@ -180,6 +180,7 @@ body {
     width: 100vw;
     height: 100vh;  
     transform: scale(0.5);
+    margin-bottom: 8rem;
 
     .container {
         width: 100%;
@@ -244,7 +245,7 @@ body {
         .about__text {
             max-width: 90rem;
             text-align: center;
-            font-size: 3rem;
+            font-size: 3.2rem;
             font-weight: 700;
             opacity: 0;
             transform: translateY(300px);
@@ -267,10 +268,11 @@ body {
                 background-repeat: no-repeat;
                 width: 2rem;
                 height: 2rem;
-                transform: scale(.7);
+                // transform: scale(1);
                 display: inline-block;
                 transform: translateY(5px);
                 margin: 0 .2rem;
+                margin-left: 1rem;
             }
         }
 
@@ -286,6 +288,7 @@ body {
                 height: 2.5rem;
                 transform: translateY(7px);
                 margin: 0 .4rem;
+                margin-left: 1rem;
                 border-radius: 5px;
             }
         }
@@ -302,6 +305,7 @@ body {
                 height: 2.3rem;
                 transform: translateY(10px);
                 margin: 0 .4rem;
+                margin-left: 1rem;
                 border-radius: 5px;
             }
         }
@@ -811,7 +815,7 @@ body {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin-bottom: 40px;
+        // margin-bottom: 40px;
     }
 
     .footer__title {
