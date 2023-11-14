@@ -525,8 +525,8 @@ body {
 .collections {
 
     .container {
-        width: 97%;
-        height: 50rem;
+        width: 90%;
+        height: 60rem;
         margin: 0 auto;
         display: flex;
         flex-direction: column;
@@ -560,6 +560,7 @@ body {
         border-radius: .5rem;
         opacity: 0;
         top: 0;
+        transition: .5s;
         left: 0;
     }
 
