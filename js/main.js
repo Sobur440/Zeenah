@@ -14,6 +14,7 @@ const sliderElements = document.querySelectorAll(".category__container")
 const dot1 = document.querySelector(".cert__dot1")
 const dot2 = document.querySelector(".cert__dot2")
 const dot3 = document.querySelector(".cert__dot3")
+const categories = document.querySelectorAll(".category__container")
 const collections = document.querySelectorAll(".collection__list__text")
 const bracelet = document.querySelector(".bracelet__text")
 const goodsContainer = document.querySelector(".goods__container")
@@ -172,6 +173,29 @@ document.addEventListener("DOMContentLoaded", () => {
     sliderElements.forEach(sliderElement => {
         sliderObserver.observe(sliderElement)    
     })
+
+    // Categories Interactions
+
+    const catImgContainerClasses = [
+        "men__category__img",
+        "women__category__img",
+        "kids__category__img"
+    ]
+
+    categories.forEach(category => {
+        category.addEventListener("mouseover", (e) => {
+            const targetClass = e.target.classList[2]
+            console.log(targetClass)
+            catImgContainerClasses.forEach(catImgContainerClass => {
+                const match = document.querySelector(`.${catImgContainerClass}`).classList.contains(targetClass)
+                console.log(match)
+            })
+        })
+    })
+
+
+
+    // collections Interaction
     
     const imgContainerClasses = [
         "earrings__img__container",
@@ -239,8 +263,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     }
-    
-    
+
+
 
 })
 
@@ -259,7 +283,7 @@ const preloader = () => {
     }
     
     setTimeout(() => {
-        setInterval(updateCounter, 300)
+        setInterval(updateCounter, 350)
     }, 500)
 }
 preloader()
@@ -270,7 +294,7 @@ const interactions = () => {
 
     tl.to(".waiting, .counter", {
         opacity: 0,
-        delay: 6
+        delay: 7
     })
     .to(".loader", {
         scale: 0,

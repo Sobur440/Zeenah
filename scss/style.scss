@@ -242,7 +242,7 @@ body {
         justify-content: center;
 
         .about__text {
-            max-width: 75rem;
+            max-width: 90rem;
             text-align: center;
             font-size: 3rem;
             font-weight: 700;
@@ -368,7 +368,7 @@ body {
     }
 
     .good__image {
-        min-width: 300px;
+        min-width: 22.5vw;
         object-fit: cover;
         margin-right: 10px;
 
@@ -887,6 +887,17 @@ body {
                 font-size: 2rem;
             }
         }
+    }
+
+    .goods__container {
+    
+        .good__image {
+            min-width: 300px;
+            object-fit: cover;
+            margin-right: 10px;
+    
+        }
+    
     }
 
     .men__women__kids__container {
