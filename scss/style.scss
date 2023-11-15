@@ -438,6 +438,10 @@ body {
         font-size: 1.2rem;
     }
 
+    .shop__all {
+        margin-top: 4rem;
+    }
+
     .shop__all__link {
         border: 1px solid $primary-color;
         padding: .8rem 2rem;
@@ -483,8 +487,9 @@ body {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 7rem;
+    // margin-bottom: 7rem;
     margin-top: -3rem;
+    background: blue;
 
 
     .category {
