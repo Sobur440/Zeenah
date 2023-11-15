@@ -343,26 +343,26 @@ const interactions = () => {
     const tl = gsap.timeline()
 
 
-    tl.to(".intro2", {
+    tl.to(".intro", {
         y: 0,
         opacity: 1,
-        stagger: {amount: 0.35}
+        stagger: {amount: 0.4}
     })
-    .to(".intro", {
+    .to(".intro2", {
         y: 0,
         opacity: 1,
-        stagger: {amount: 0.35}
+        stagger: {amount: 0.4}
     })
     .to(".intro", {
         y: -50,
         opacity: 0,
         delay: 11.5,
-        stagger: {amount: 0.35}
+        stagger: {amount: 0.4}
     })
     .to(".intro2", {
         y: -50,
         opacity: 0,
-        stagger: {amount: 0.35}
+        stagger: {amount: 0.4}
     })
     .to(".waiting, .counter", {
         opacity: 0,
