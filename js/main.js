@@ -19,6 +19,8 @@ const collections = document.querySelectorAll(".collection__list__text")
 const bracelet = document.querySelector(".bracelet__text")
 const goodsContainer = document.querySelector(".goods__container")
 const toTop = document.querySelectorAll(".top__links")
+const leftArrow = document.querySelector(".left__arrow")
+const rightArrow = document.querySelector(".right__arrow")
 
 // Implementing smooth scroll with lenis
 
@@ -81,7 +83,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const arrivalsObserver = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if(entry.isIntersecting) {
-                const targetElement = entry.target
                 gsap.to(".goods__details", {
                     y: 0,
                     opacity: 1,
@@ -92,42 +93,55 @@ document.addEventListener("DOMContentLoaded", () => {
     })
     const arrEls = document.querySelectorAll(".goods__details")
 
-    // const goodsContainerPosition = goodsContainer.getBoundingClientRect()
-    let isDragging = false
-    let offsetX = null
-    goodsContainer.addEventListener("mousedown", (e) => {
-        goodsContainer.style.cursor = "grabbing"
-        isDragging = true
-        offsetX = e.clientX
-
-    })
-
-    document.addEventListener("mousemove", (e) => {
-        if(!isDragging)
-        return
-
-        const x = e.clientX - offsetX
-        arrEls.forEach(arrEl => {
-            const left = parseInt(getComputedStyle(arrEl).left || 0)
-            arrEl.style.left = left + x + "px"
+    rightArrow.addEventListener("click", () => {
+        goodsContainer.scrollBy({
+            top: 0,
+            left: 500,
+            behavior: "smooth"
         })
-
-        offsetX = e.clientX
-
+    })
+    leftArrow.addEventListener("click", () => {
+        goodsContainer.scrollBy({
+            top: 0,
+            left: -500,
+            behavior: "smooth"
+        })
     })
 
-    document.addEventListener("mouseup", () => {
-        if(isDragging) {
-            isDragging = false
-            goodsContainer.style.cursor = "grab"
-        }
-    })
+    // let isDragging = false
+    // let offsetX = null
+    // goodsContainer.addEventListener("mousedown", (e) => {
+    //     goodsContainer.style.cursor = "grabbing"
+    //     isDragging = true
+    //     offsetX = e.clientX
+
+    // })
+
+    // document.addEventListener("mousemove", (e) => {
+    //     if(!isDragging)
+    //     return
+
+    //     const x = e.clientX - offsetX
+    //     arrEls.forEach(arrEl => {
+    //         const left = parseInt(getComputedStyle(arrEl).left || 0)
+    //         arrEl.style.left = left + x + "px"
+    //     })
+
+    //     offsetX = e.clientX
+
+    // })
+
+    // document.addEventListener("mouseup", () => {
+    //     if(isDragging) {
+    //         isDragging = false
+    //         goodsContainer.style.cursor = "grab"
+    //     }
+    // })
 
     //Category Animatiom
     const catObserver = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if(entry.isIntersecting) {
-                const targetElement = entry.target
                 gsap.to(".category__container", {
                     y: 0,
                     opacity: 1,
