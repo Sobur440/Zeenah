@@ -83,11 +83,16 @@ document.addEventListener("DOMContentLoaded", () => {
     const arrivalsObserver = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if(entry.isIntersecting) {
-                gsap.to(".goods__details", {
+                gsap.timeline()
+                .to(".goods__details", {
                     y: 0,
                     opacity: 1,
                     stagger: {amount: 1}
                 })
+                .to(".title__and__shop__all__link__container, .arrows__container", {
+                    opacity: 1
+                })
+
             }
         })
     })
@@ -96,47 +101,17 @@ document.addEventListener("DOMContentLoaded", () => {
     rightArrow.addEventListener("click", () => {
         goodsContainer.scrollBy({
             top: 0,
-            left: 500,
+            left: 700,
             behavior: "smooth"
         })
     })
     leftArrow.addEventListener("click", () => {
         goodsContainer.scrollBy({
             top: 0,
-            left: -500,
+            left: -700,
             behavior: "smooth"
         })
     })
-
-    // let isDragging = false
-    // let offsetX = null
-    // goodsContainer.addEventListener("mousedown", (e) => {
-    //     goodsContainer.style.cursor = "grabbing"
-    //     isDragging = true
-    //     offsetX = e.clientX
-
-    // })
-
-    // document.addEventListener("mousemove", (e) => {
-    //     if(!isDragging)
-    //     return
-
-    //     const x = e.clientX - offsetX
-    //     arrEls.forEach(arrEl => {
-    //         const left = parseInt(getComputedStyle(arrEl).left || 0)
-    //         arrEl.style.left = left + x + "px"
-    //     })
-
-    //     offsetX = e.clientX
-
-    // })
-
-    // document.addEventListener("mouseup", () => {
-    //     if(isDragging) {
-    //         isDragging = false
-    //         goodsContainer.style.cursor = "grab"
-    //     }
-    // })
 
     //Category Animatiom
     const catObserver = new IntersectionObserver(entries => {
@@ -367,9 +342,30 @@ const interactions = () => {
 
     const tl = gsap.timeline()
 
-    tl.to(".waiting, .counter", {
+
+    tl.to(".intro2", {
+        y: 0,
+        opacity: 1,
+        stagger: {amount: 0.35}
+    })
+    .to(".intro", {
+        y: 0,
+        opacity: 1,
+        stagger: {amount: 0.35}
+    })
+    .to(".intro", {
+        y: -50,
         opacity: 0,
-        delay: 11.5
+        delay: 11.5,
+        stagger: {amount: 0.35}
+    })
+    .to(".intro2", {
+        y: -50,
+        opacity: 0,
+        stagger: {amount: 0.35}
+    })
+    .to(".waiting, .counter", {
+        opacity: 0,
     })
     .to(".loader", {
         scale: 0,
@@ -434,7 +430,6 @@ const interactions = () => {
                     opacity: 1,
                     y: 0,
                     ease: "power4.out",
-                    // duration: 1
                     stagger: {amount: 0.5}
                 })
             }

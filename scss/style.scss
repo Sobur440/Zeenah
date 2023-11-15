@@ -69,6 +69,17 @@ section {
     font-size: 2rem;
 }
 
+.intro {
+    transform: translateY(20px);
+    opacity: 0;
+    display: inline-block;
+}
+.intro2 {
+    transform: translateY(50px);
+    opacity: 0;
+    display: inline-block;
+}
+
 .counter {
     color: white;
     font-size: 10vw;
@@ -333,6 +344,7 @@ body {
         display: flex;
         justify-content: space-between;
         margin-bottom: 1rem;
+        opacity: 0;
 
         .title {
             font-size: 1.2rem;
@@ -343,7 +355,7 @@ body {
         width: 100%;
         display: flex;
         justify-content: space-between;
-        overflow-x: hidden;
+        overflow: hidden;
         position: relative;
         gap: 1rem;
     }
@@ -366,6 +378,7 @@ body {
         margin-top: 2rem;
         align-self: flex-end;
         gap: 1rem;
+        opacity: 0;
     }
 
     .left__arrow {
@@ -955,6 +968,12 @@ body {
 
 @media (max-width: 900px) {
 
+    .waiting {
+        font-size: 3vw;
+        word-spacing: .2em;
+        text-align: center;
+    }
+
     .about {
     
     
@@ -1059,6 +1078,10 @@ body {
 
 @media (max-width: 850px) {
 
+    .search {
+        display: none;
+    }
+
     .arrivals {
 
         .arrows__container {
@@ -1125,7 +1148,7 @@ body {
 
         .menu__btn__container {
             display: flex;
-            order: 3;
+            // order: 3;
             cursor: pointer;
         }
         .container {
@@ -1163,17 +1186,17 @@ body {
                 font-size: 2rem;
             }
 
-            .logo {
-                order: 2;
-            }
+            // .logo {
+            //     order: 2;
+            // }
 
 
     
         }
 
-        .nav__icons {
-            order: 1;
-        }
+        // .nav__icons {
+        //     order: 1;
+        // }
 
     }
 
