@@ -1059,16 +1059,19 @@ body {
 
 @media (max-width: 850px) {
 
-    .arrows__container {
-        display: none;
-    }
+    .arrivals {
 
-    .goods__container {
-        overflow-x: scroll;
-    }
-
-    .goods__container::-webkit-scrollbar {
-        width: 0;
+        .arrows__container {
+            display: none;
+        }
+    
+        .goods__container {
+            overflow-x: scroll;
+        }
+    
+        .goods__container::-webkit-scrollbar {
+            width: 0;
+        }
     }
 
     .categories {
