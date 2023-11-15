@@ -438,10 +438,6 @@ body {
         font-size: 1.2rem;
     }
 
-    .shop__all {
-        margin-top: 1rem;
-    }
-
     .shop__all__link {
         border: 1px solid $primary-color;
         padding: .8rem 2rem;
@@ -487,7 +483,7 @@ body {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 7rem;
+    margin-bottom: 8rem;
     margin-top: -3rem;
 
 
@@ -806,7 +802,7 @@ body {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin: 2.5rem 0;
+        margin: 1.7rem 0;
         padding-bottom:4rem;
         border-bottom: 1px solid white;
         flex: 1;
@@ -842,18 +838,12 @@ body {
         margin-right: 1rem;
     }
 
-    .line {
-        width: 100%;
-        background: white;
-        height: 1px;
-    }
-
     .second__layer {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin-bottom: 1.5rem;
+        margin-bottom: 2rem;
         height: 33rem;
         flex: 2;
         padding-bottom: 3rem;
