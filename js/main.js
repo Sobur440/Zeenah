@@ -116,6 +116,7 @@ document.addEventListener("DOMContentLoaded", () => {
     //Category Animatiom
     const catObserver = new IntersectionObserver(entries => {
         entries.forEach(entry => {
+            const targetElement = entry.target
             if(entry.isIntersecting) {
                 gsap.to(".category__container", {
                     y: 0,
@@ -346,23 +347,20 @@ const interactions = () => {
     tl.to(".intro", {
         y: 0,
         opacity: 1,
-        stagger: {amount: 0.4}
+        delay: 0.3
     })
     .to(".intro2", {
         y: 0,
         opacity: 1,
-        stagger: {amount: 0.4}
     })
     .to(".intro", {
         y: -50,
         opacity: 0,
         delay: 11.5,
-        stagger: {amount: 0.4}
     })
     .to(".intro2", {
         y: -50,
         opacity: 0,
-        stagger: {amount: 0.4}
     })
     .to(".waiting, .counter", {
         opacity: 0,

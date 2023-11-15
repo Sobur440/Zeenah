@@ -69,6 +69,10 @@ section {
     font-size: 2rem;
 }
 
+.waiting {
+    text-align: center;
+}
+
 .intro {
     transform: translateY(20px);
     opacity: 0;
@@ -144,6 +148,10 @@ body {
     }
 
     .menu__btn__container {
+        display: none;
+    }
+
+    .menu__btn {
         background: white;
         width: 7rem;
         height: 2rem;
@@ -151,12 +159,13 @@ body {
         justify-content: center;
         align-items: center;
         border-radius: 2rem;
-        display: none;
-    }
-
-    .menu__btn {
         text-transform: capitalize;
         font-size: 1.2rem;
+        order: 2;
+    }
+
+    .bag2 {
+        order: 1;
     }
 
     .close__btn__container {
@@ -969,9 +978,10 @@ body {
 @media (max-width: 900px) {
 
     .waiting {
-        font-size: 3vw;
+        font-size: 1.6rem;
         word-spacing: .2em;
         text-align: center;
+        padding: 0 1rem;
     }
 
     .about {
@@ -1121,12 +1131,11 @@ body {
             min-width: 100%;
             scroll-snap-align: start;
             scroll-snap-stop: always;
-            transform: scale(0);
         }
         
         .category__img__container {
             opacity: 1;
-            transform: translateY(0px);
+            transform: translateY(0);
         }
 
         .category {
@@ -1148,8 +1157,8 @@ body {
 
         .menu__btn__container {
             display: flex;
-            // order: 3;
             cursor: pointer;
+            gap: 10px;
         }
         .container {
         
@@ -1194,9 +1203,9 @@ body {
     
         }
 
-        // .nav__icons {
-        //     order: 1;
-        // }
+        .nav__icons {
+            display: none;
+        }
 
     }
 
@@ -1268,6 +1277,21 @@ body {
 }
 
 @media (max-width: 550px) {
+
+    .about {
+
+
+        .container {
+            .star, .ring, .watch {
+
+                &:after {
+                    content: "";
+                    display: none;
+                }
+            }
+        }
+    }
+
     .about {
 
         .container {
@@ -1330,61 +1354,6 @@ body {
     .navbar {
         .nav__icons {
             gap: 10px;
-        }
-    }
-
-    .about {
-
-        .container {
-
-            .star {
-
-
-                &:after {
-                    content: "";
-                    background: url("../images/star.png");
-                    background-size: cover;
-                    background-repeat: no-repeat;
-                    width: 1.5rem;
-                    height: 1.5rem;
-                    transform: scale(.6) !important;
-                    display: inline-block;
-                    transform: translateY(.2rem) !important;
-                    margin: 0 .2rem;
-                }
-            }
-    
-            .ring {
-    
-                &:after {
-                    content: "";
-                    background: url("../images/rings.png");
-                    background-repeat: no-repeat;
-                    background-size: cover;
-                    display: inline-block;
-                    width: 3rem;
-                    height: 2rem;
-                    transform: translateY(7px);
-                    margin: 0 .4rem;
-                    border-radius: 5px;
-                }
-            }
-    
-            .watch {
-    
-                &:after {
-                    content: "";
-                    background: url("../images/watch.png");
-                    background-repeat: no-repeat;
-                    background-size: cover;
-                    display: inline-block;
-                    width: 3rem;
-                    height: 2rem;
-                    transform: translateY(10px);
-                    margin: 0 .4rem;
-                    border-radius: 5px;
-                }
-            }
         }
     }
 
