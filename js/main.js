@@ -92,6 +92,37 @@ document.addEventListener("DOMContentLoaded", () => {
     })
     const arrEls = document.querySelectorAll(".goods__details")
 
+    // const goodsContainerPosition = goodsContainer.getBoundingClientRect()
+    let isDragging = false
+    let offsetX = null
+    goodsContainer.addEventListener("mousedown", (e) => {
+        goodsContainer.style.cursor = "grabbing"
+        isDragging = true
+        offsetX = e.clientX
+
+    })
+
+    document.addEventListener("mousemove", (e) => {
+        if(!isDragging)
+        return
+
+        const x = e.clientX - offsetX
+        arrEls.forEach(arrEl => {
+            const left = parseInt(getComputedStyle(arrEl).left || 0)
+            arrEl.style.left = left + x + "px"
+        })
+
+        offsetX = e.clientX
+
+    })
+
+    document.addEventListener("mouseup", () => {
+        if(isDragging) {
+            isDragging = false
+            goodsContainer.style.cursor = "grab"
+        }
+    })
+
     //Category Animatiom
     const catObserver = new IntersectionObserver(entries => {
         entries.forEach(entry => {

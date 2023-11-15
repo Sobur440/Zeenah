@@ -341,7 +341,7 @@ body {
         width: 100%;
         display: flex;
         justify-content: space-between;
-        overflow-x: scroll;
+        overflow-x: hidden;
         position: relative;
         gap: 1rem;
         cursor: grab;
@@ -354,10 +354,13 @@ body {
     .goods__details {
         transform: translateY(300px);
         opacity: 0;
+        position: relative;
     }
 
     .good__name {
+        margin-top: .6rem;
         margin-bottom: .4rem;
+
     }
     
 }
