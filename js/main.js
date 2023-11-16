@@ -334,7 +334,7 @@ const preloader = () => {
     }
     
     setTimeout(() => {
-        setInterval(updateCounter, 550)
+        setInterval(updateCounter, 560)
     }, 400)
 }
 preloader()
