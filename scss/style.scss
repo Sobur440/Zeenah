@@ -163,6 +163,7 @@ body {
         text-transform: capitalize;
         font-size: 1.1rem;
         order: 2;
+        cursor: pointer;
         padding: .6rem;
     }
 
@@ -1162,7 +1163,6 @@ body {
 
         .menu__btn__container {
             display: flex;
-            cursor: pointer;
             gap: 10px;
         }
         .container {
