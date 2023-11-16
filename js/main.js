@@ -334,7 +334,7 @@ const preloader = () => {
     }
     
     setTimeout(() => {
-        setInterval(updateCounter, 500)
+        setInterval(updateCounter, 550)
     }, 400)
 }
 preloader()
@@ -349,18 +349,10 @@ const interactions = () => {
         opacity: 1,
         delay: 0.3
     })
-    .to(".intro2", {
-        y: 0,
-        opacity: 1,
-    })
     .to(".intro", {
         y: -50,
         opacity: 0,
         delay: 11.5,
-    })
-    .to(".intro2", {
-        y: -50,
-        opacity: 0,
     })
     .to(".waiting, .counter", {
         opacity: 0,
