@@ -5,7 +5,7 @@ import arrivals from "./arrival.js"
 
 //*Dom elements
 
-const menuBtn = document.querySelector(".menu__btn__container")
+const menuBtn = document.querySelector(".menu__btn")
 const navLinksContainer = document.querySelector(".nav__links__container")
 const navLinks = document.querySelectorAll(".link")
 const closeMenuBtn = document.querySelector(".close__btn")

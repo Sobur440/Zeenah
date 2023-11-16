@@ -1119,7 +1119,7 @@ body {
 
     .men__women__kids__container {
         width: 60%;
-        overflow-x: auto;
+        overflow-x: scroll;
         overflow-y: hidden;
         margin-bottom: 2rem;
         scroll-snap-type: x mandatory;
