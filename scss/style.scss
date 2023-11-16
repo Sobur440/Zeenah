@@ -1279,19 +1279,24 @@ body {
         line-height: 1.2;
     }
 
-    // .about {
+    .about {
 
 
-    //     .container {
-    //         .star, .ring, .watch {
+        .container {
+            .star, .ring, .watch {
+                
 
-    //             &:after {
-    //                 content: "";
-    //                 display: none;
-    //             }
-    //         }
-    //     }
-    // }
+                &:after {
+                    content: "";
+                    transform: scale(.7) translateY(15px);
+                    height: 2rem;
+                    margin-left: .2rem;
+                    margin-right: 0;
+                }
+            }
+        }
+
+}
 
     .about {
 
