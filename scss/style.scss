@@ -1279,19 +1279,19 @@ body {
         line-height: 1.2;
     }
 
-    .about {
+    // .about {
 
 
-        .container {
-            .star, .ring, .watch {
+    //     .container {
+    //         .star, .ring, .watch {
 
-                &:after {
-                    content: "";
-                    display: none;
-                }
-            }
-        }
-    }
+    //             &:after {
+    //                 content: "";
+    //                 display: none;
+    //             }
+    //         }
+    //     }
+    // }
 
     .about {
 
@@ -1382,6 +1382,10 @@ body {
         .good__image {
             min-width: 13rem;
         }
+    }
+
+    .explore__categories {
+        margin-bottom: 2rem;
     }
 
     .men__women__kids__container {
