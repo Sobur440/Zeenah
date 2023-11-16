@@ -1313,6 +1313,10 @@ body {
             }
     }
 
+    .slider__dots__container {
+        margin-top: -.5rem;   
+    }
+
     .collections {
 
         .collections__list {
@@ -1393,6 +1397,10 @@ body {
                 font-size: 2.2rem;
             }
     }
+    
+    .slider__dots__container {
+        margin-top: -1rem;
+    }
 
     .collections {
 
@@ -1444,6 +1452,11 @@ body {
             padding: .2rem 0 .2rem 1.2rem;
             width: 90%; 
             height: 3.7rem;
+            border: 1px solid #2D2D2D;
+        }
+
+        .newsletter__title__container {
+            margin-bottom: 1.5rem;
         }
 
         .newsletter__title {
