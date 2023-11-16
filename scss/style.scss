@@ -153,15 +153,16 @@ body {
 
     .menu__btn {
         background: white;
-        width: 7rem;
+        width: 5rem;
         height: 2rem;
         display: flex;
         justify-content: center;
         align-items: center;
         border-radius: 2rem;
         text-transform: capitalize;
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         order: 2;
+        padding: .6rem;
     }
 
     .bag2 {
@@ -1119,6 +1120,7 @@ body {
     .men__women__kids__container {
         width: 60%;
         overflow-x: auto;
+        overflow-y: hidden;
         margin-bottom: 2rem;
         scroll-snap-type: x mandatory;
 
@@ -1135,7 +1137,7 @@ body {
         
         .category__img__container {
             opacity: 1;
-            transform: translateY(0);
+            transform: translateY(0) rotate(-7deg);
         }
 
         .category {
@@ -1174,6 +1176,7 @@ body {
                 padding-top: 3rem;
                 gap: 5rem;
                 transition: .4s ease-in-out;
+                z-index: 10;
             }
 
             .down {
@@ -1195,9 +1198,9 @@ body {
                 font-size: 2rem;
             }
 
-            // .logo {
-            //     order: 2;
-            // }
+            .logo {
+                transform: scale(.8);
+            }
 
 
     
