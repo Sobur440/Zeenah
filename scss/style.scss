@@ -71,6 +71,7 @@ section {
 
 .waiting {
     text-align: center;
+    max-width: 60rem;
 }
 
 .intro {
@@ -1133,6 +1134,8 @@ body {
             min-width: 100%;
             scroll-snap-align: start;
             scroll-snap-stop: always;
+            transform: translateY(0);
+            opacity: 1;
         }
         
         .category__img__container {
@@ -1281,6 +1284,11 @@ body {
 
 @media (max-width: 550px) {
 
+    .waiting {
+        max-width: 95%;
+        line-height: 1.2;
+    }
+
     .about {
 
 
@@ -1376,9 +1384,17 @@ body {
 
     .collections {
 
+        .container {
+            height: 40rem;
+        }
+
         .collections__list {
             line-height: 0;
             gap: 2em;
+        }
+
+        .collection__list__text {
+            font-size: 2rem;
         }
 
         .discover__all {

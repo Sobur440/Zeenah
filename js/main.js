@@ -113,7 +113,7 @@ document.addEventListener("DOMContentLoaded", () => {
         })
     })
 
-    //Category Animatiom
+    // Category Animatiom
     const catObserver = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             const targetElement = entry.target
