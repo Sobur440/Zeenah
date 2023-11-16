@@ -449,25 +449,6 @@ body {
         margin-right: 10px;
 
     }
-
-    .drag {
-        width: 8rem;
-        height: 5rem;
-        border: 1px solid white;
-        background: transparent;
-        position: absolute;
-        left: 60%;
-        bottom: 35%;
-        z-index: 9;
-        border-radius: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: white;
-        font-family: $light-machina;
-
-    }
-
 }
 
 // Categories
@@ -1049,6 +1030,7 @@ body {
             align-items: flex-start;
             flex: 2;
             padding-bottom: 1rem;
+            max-width: 93%;
         }
 
         .socials {
@@ -1069,6 +1051,12 @@ body {
             padding-left: 3rem;
             align-items: center;
             height: 12rem;
+            transform: scale(.85);
+        }
+
+        .to__top__link {
+            margin-bottom: 1.4rem;
+            margin-left: 1rem;
         }
 
         .second__layer {
@@ -1125,6 +1113,7 @@ body {
         overflow-y: hidden;
         margin-bottom: 2rem;
         scroll-snap-type: x mandatory;
+        transform: scale(1.2);
 
         &::-webkit-scrollbar {
             width: 0;
@@ -1228,6 +1217,7 @@ body {
 
     .men__women__kids__container {
         margin-bottom: 1rem;
+        transform: scale(1.4);
     }
 
     .collections {
@@ -1383,6 +1373,13 @@ body {
         }
     }
 
+    .goods__container {
+
+        .good__image {
+            min-width: 18rem;
+        }
+    }
+
     .men__women__kids__container {
         margin-bottom: 0;
         margin-top: -2rem;
@@ -1436,16 +1433,23 @@ body {
         .subscribe {
             width: 10%;
             padding: 0 4rem;
-            right: 2%;
-            top: 14%;
+            right: 7%;
+            top: 13%;
             font-size: .9rem;
-            height: 3rem;
+            height: 2.7rem;
         }
 
         .input {
             font-size: 1.4rem;
             padding: .2rem 0 .2rem 1.2rem;
+            width: 90%; 
+            height: 3.7rem;
         }
+
+        .newsletter__title {
+            word-spacing: 0;
+        }
+
     }
 
     .footer {
